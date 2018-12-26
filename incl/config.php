@@ -264,8 +264,8 @@ if($scanner_ok) {
     $mode_list = get_scanner_mode_options($scanner_name);
     $mode_default = get_scanner_mode_default($scanner_name);
     $resolution_list = get_scanner_resolution_options($scanner_name);
-    $resolution_max = (int)end($resolution_list);
-    $resolution_min = (int)reset($resolution_list);
+    $resolution_max = (int)max($resolution_list);
+    $resolution_min = (int)min($resolution_list);
     $resolution_default = get_scanner_resolution_default($scanner_name);
     $brightness_supported = strtolower(get_scanner_brightness_supported($scanner_name)) === 'true';
     $brightness_default = (int)get_scanner_brightness_default($scanner_name);
